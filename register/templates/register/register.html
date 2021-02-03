@@ -1,0 +1,17 @@
+{% include "pages/layout.html" %}
+{% block body %}
+{% load crispy_forms_tags %}
+<h1 style="font-size: 5rem; margin-top:5rem;">Create an account</h1>
+<div style="padding-left: 42rem;padding-right: 42rem;">
+<form method="POST" class="form-group" class="btn btn-success" style="font-size: 1rem;">
+{% csrf_token %}
+    {{form| crispy}}
+    <div style="display: flex; justify-content:center; align-items: center; padding:1rem">
+<button type="submit" value="Submit" style="color: rgb(121, 24, 24); width:30%;">
+</div>
+
+{% endblock body %}
+
+</div>
+
+

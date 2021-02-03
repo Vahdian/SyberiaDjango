@@ -1,0 +1,18 @@
+{% extends 'pages/index.html' %}
+{% block body %}
+<h1 style="font-size: 3rem; margin-top:15%;">Login</h1>
+
+{% load crispy_forms_tags %}
+<div style="padding-left: 40rem; padding-right: 40rem;">
+<form method="post" class="form-group">
+{% csrf_token %}
+{{form|crispy}}
+<p style="color: white; text-align: center; margin:1rem;">Dont have an account? Create one <a href="/register">here</a></p>
+<div style="display: flex; justify-content: center; align-items: center;">
+<button type="submit" class="btn btn-success">Login</button>
+</div>
+
+
+</form>
+</div>
+{% endblock body %}
